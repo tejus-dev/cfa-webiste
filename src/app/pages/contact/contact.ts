@@ -19,7 +19,7 @@ export class Contact {
   addressLine1 = '2nd Stage, Pillanna Garden';
   addressLine2 = 'Bangalore, Karnataka';
 
-  phoneDisplay = '+91 9880065321';
+  phoneDisplay = '+91 08025497878';
   whatsappDisplay = '+91 9880065321';
   email = '';
 

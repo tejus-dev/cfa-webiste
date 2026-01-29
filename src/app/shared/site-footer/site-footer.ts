@@ -13,7 +13,7 @@ export class SiteFooter {
   year = new Date().getFullYear();
 
   // TODO: replace with real numbers
-  phone = '+91 9880065321';
+  phone = '+91 08025497878';
   whatsapp = '+91 9880065321';
   email = 'cfa.school@email.com';
 
