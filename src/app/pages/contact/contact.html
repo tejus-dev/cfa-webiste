@@ -1,0 +1,119 @@
+<div class="container">
+
+    <section class="top">
+        <h1>Contact</h1>
+        <p>
+            Reach out to CF Andrews High School for admissions, academic details, or general enquiries.
+        </p>
+    </section>
+
+    <section class="grid">
+
+        <!-- Left: Details -->
+        <div class="card">
+            <div class="cardTitle">CF Andrews High School</div>
+            <div class="muted">{{ tagline }}</div>
+
+            <div class="info">
+                <div class="row">
+                    <div class="label">Address</div>
+                    <div class="value">
+                        {{ addressLine1 }}<br />
+                        {{ addressLine2 }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="label">Phone</div>
+                    <div class="value">
+                        <a class="link" [href]="telLink">{{ phoneDisplay }}</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="label">WhatsApp</div>
+                    <div class="value">
+                        <a class="link" [href]="whatsappLink" target="_blank" rel="noopener">{{ whatsappDisplay }}</a>
+                    </div>
+                </div>
+
+                <div class="row" *ngIf="email">
+                    <div class="label">Email</div>
+                    <div class="value">
+                        <a class="link" [href]="mailLink">{{ email }}</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="label">School Hours</div>
+                    <div class="value">
+                        {{ hoursWeekday }}<br />
+                        {{ hoursSaturday }}<br />
+                        {{ hoursSunday }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <a [href]="telLink"><button class="btn primary" type="button">Call</button></a>
+                <a [href]="whatsappLink" target="_blank" rel="noopener"><button class="btn soft"
+                        type="button">WhatsApp</button></a>
+                <a [href]="mapsLink" target="_blank" rel="noopener"><button class="btn ghost" type="button">Open in
+                        Maps</button></a>
+            </div>
+
+            <div class="note">
+                Tip: For quick admission enquiry, WhatsApp works best.
+            </div>
+        </div>
+
+        <!-- Right: Map + Enquiry -->
+        <div class="stack">
+            <div class="card mapCard">
+                <div class="cardTitle">Location</div>
+                <div class="muted">Pillanna Garden, Bangalore</div>
+
+                <div class="mapWrap" aria-label="Google map">
+                    <iframe [src]="mapEmbedUrl" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+            </div>
+
+            <div class="enquiryWrap">
+                <div class="enquiryCard">
+                    <div class="card">
+                        <div class="cardTitle">Send an Enquiry</div>
+                        <div class="muted">This will open your email app with the message ready.</div>
+
+                        <form class="form" (ngSubmit)="sendEnquiry()">
+                            <label class="field">
+                                <span>Name</span>
+                                <input [(ngModel)]="form.name" name="name" required
+                                    placeholder="Parent / Guardian name" />
+                            </label>
+
+                            <label class="field">
+                                <span>Phone</span>
+                                <input [(ngModel)]="form.phone" name="phone" required placeholder="+91…" />
+                            </label>
+
+                            <label class="field">
+                                <span>Student Class</span>
+                                <input [(ngModel)]="form.studentClass" name="studentClass"
+                                    placeholder="e.g., LKG / 5th / 9th" />
+                            </label>
+
+                            <label class="field">
+                                <span>Message</span>
+                                <textarea [(ngModel)]="form.message" name="message" rows="4"
+                                    placeholder="Admissions enquiry / timings / fee details..."></textarea>
+                            </label>
+                            <button pButton class="btn primary" icon="pi pi-send"></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>

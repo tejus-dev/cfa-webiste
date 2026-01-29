@@ -1,0 +1,29 @@
+<div class="container">
+
+    <section class="top">
+        <h1>Academics</h1>
+        <p>
+            Our academic structure is designed to build strong foundations, develop discipline,
+            and prepare students confidently for examinations and life.
+        </p>
+    </section>
+
+    <section class="grid">
+
+        <div class="card" *ngFor="let s of stages; let i = index">
+            <div class="cardHeader">
+                <div class="index">{{ i + 1 }}</div>
+                <div>
+                    <div class="title">{{ s.title }}</div>
+                    <div class="sub">{{ s.subtitle }}</div>
+                </div>
+            </div>
+
+            <ul>
+                <li *ngFor="let p of s.points">{{ p }}</li>
+            </ul>
+        </div>
+
+    </section>
+
+</div>

@@ -1,0 +1,35 @@
+<section class="wrap" (window:keydown)="onKey($event)">
+    <div class="intro" revealOnScroll>
+        <h1>Gallery</h1>
+        <h3>Campus, classrooms, and school events — a glimpse of learning in action.</h3>
+    </div>
+
+    <div class="grid" revealOnScroll>
+        <button class="card" *ngFor="let img of images; let i = index" type="button" (click)="open(i)" revealOnScroll
+            [revealOnScroll]="i * 40">
+            <img [src]="img.src" [alt]="img.title" loading="lazy" decoding="async" />
+            <div class="overlay">
+                <!-- <div class="tag">{{ img.title }}</div> -->
+                <div class="hint">View</div>
+            </div>
+        </button>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" *ngIf="lightboxOpen" (click)="close()">
+        <div class="lbInner" (click)="$event.stopPropagation()">
+            <button class="lbClose" type="button" (click)="close()">✕</button>
+
+            <button class="lbNav left" type="button" (click)="prev()">‹</button>
+
+            <img class="lbImg" [src]="images[activeIndex]?.src" [alt]="images[activeIndex]?.title" />
+
+            <button class="lbNav right" type="button" (click)="next()">›</button>
+
+            <div class="lbCaption">
+                <span>{{ images[activeIndex]?.title }}</span>
+                <span class="count">{{ activeIndex + 1 }} / {{ images.length }}</span>
+            </div>
+        </div>
+    </div>
+</section>

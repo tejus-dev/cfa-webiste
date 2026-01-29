@@ -1,0 +1,121 @@
+<div class="container">
+
+    <!-- HERO CAROUSEL -->
+    <section class="hero">
+        <p-carousel [value]="slides" [numVisible]="1" [numScroll]="1" [circular]="true" [autoplayInterval]="4500"
+            [showIndicators]="true" [showNavigators]="true">
+            <ng-template pTemplate="item" let-s>
+                <div class="heroSlide">
+                    <img class="heroImg" [src]="s.img" [alt]="s.title" />
+
+                    <div class="overlay"></div>
+
+                    <div class="heroContent">
+                        <div class="heroCard">
+                            <div class="kicker">CF Andrews High School</div>
+                            <h1 class="h1">{{ s.title }}</h1>
+                            <p class="p">{{ s.subtitle }}</p>
+
+                            <div class="heroActions">
+                                <a [routerLink]="s.ctaLink">
+                                    <button pButton class="btnPrimary" [label]="s.ctaLabel"
+                                        icon="pi pi-arrow-right"></button>
+                                </a>
+                                <a routerLink="/contact">
+                                    <button pButton class="btnGhost" label="Contact" icon="pi pi-phone"></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </section>
+
+    <!-- QUICK TRUST ROW -->
+    <!-- <section class="chips">
+        <div class="chip">Nursery to 10th</div>
+        <div class="chip">Pillanna Garden, Bangalore</div>
+        <div class="chip">Safe & Supportive Campus</div>
+        <div class="chip">Activities + Academics</div>
+    </section> -->
+
+    <!-- <p-divider></p-divider> -->
+
+    <!-- 3 CARDS -->
+    <section class="cards">
+        <p-card styleClass="xcard">
+            <ng-template pTemplate="header">
+                <div class="cardHead">
+                    <i class="pi pi-book"></i>
+                    <div>
+                        <div class="cardTitle">Programs</div>
+                        <div class="cardSub">Clear learning at every stage</div>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ul class="bullets">
+                <li>Nursery & KG foundation</li>
+                <li>Primary: strong fundamentals</li>
+                <li>High School: exam readiness</li>
+            </ul>
+
+            <ng-template pTemplate="footer">
+                <a routerLink="/academics">
+                    <button pButton class="btnSoft" label="Explore Academics" icon="pi pi-arrow-right"></button>
+                </a>
+            </ng-template>
+        </p-card>
+
+        <p-card styleClass="xcard">
+            <ng-template pTemplate="header">
+                <div class="cardHead">
+                    <i class="pi pi-send"></i>
+                    <div>
+                        <div class="cardTitle">Admissions</div>
+                        <div class="cardSub">Simple process, quick response</div>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ol class="steps">
+                <li>Enquiry</li>
+                <li>Visit / Documents</li>
+                <li>Confirmation</li>
+            </ol>
+
+            <ng-template pTemplate="footer">
+                <a routerLink="/admissions">
+                    <button pButton class="btnPrimary" label="Start Enquiry" icon="pi pi-comment"></button>
+                </a>
+            </ng-template>
+        </p-card>
+
+        <p-card styleClass="xcard">
+            <ng-template pTemplate="header">
+                <div class="cardHead">
+                    <i class="pi pi-building"></i>
+                    <div>
+                        <div class="cardTitle">Facilities</div>
+                        <div class="cardSub">Clean, focused learning environment</div>
+                    </div>
+                </div>
+            </ng-template>
+
+            <div class="miniGrid">
+                <div class="mini">Classrooms</div>
+                <div class="mini">Library</div>
+                <div class="mini">Activities</div>
+                <div class="mini">Safety</div>
+            </div>
+
+            <ng-template pTemplate="footer">
+                <a routerLink="/facilities">
+                    <button pButton class="btnSoft" label="See Facilities" icon="pi pi-arrow-right"></button>
+                </a>
+            </ng-template>
+        </p-card>
+    </section>
+
+</div>

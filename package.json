@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:cfa-website": "node dist/cfa-website/server/server.mjs"
+    "serve:ssr:cfa-website": "node dist/cfa-website/server/server.mjs",
+    "gen:gallery": "node scripts/generate-gallery.mjs"
   },
   "prettier": {
     "printWidth": 100,
@@ -23,6 +24,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^21.1.1",
     "@angular/common": "^20.3.0",
     "@angular/compiler": "^20.3.0",
     "@angular/core": "^20.3.0",
@@ -30,8 +32,11 @@
     "@angular/platform-browser": "^20.3.0",
     "@angular/platform-server": "^20.3.0",
     "@angular/router": "^20.3.0",
-    "@angular/ssr": "^20.3.15",
+    "@primeng/themes": "^21.0.4",
+    "@primeuix/themes": "^2.0.3",
     "express": "^5.1.0",
+    "primeicons": "^7.0.0",
+    "primeng": "^20.4.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

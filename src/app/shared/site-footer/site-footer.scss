@@ -1,0 +1,279 @@
+.ft {
+  margin-top: 80px;
+  padding: 48px 0 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  background: #e8f1f4;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 32px;
+}
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: contain;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.name {
+  font-weight: 900;
+  color: #0b1f44;
+}
+
+.meta {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.desc {
+  margin: 12px 0;
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #0b1f44;
+}
+
+.text {
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.links a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: 600;
+}
+
+.links a:hover {
+  color: #0b1f44;
+}
+
+.bottom {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.brandName {
+  font-weight: 900;
+  color: #0b1f44;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+// ...existing code...
+@media (max-width: 700px) {
+  .ft {
+    margin-top: 56px;
+    padding: 32px 0 16px;
+  }
+  .container {
+    padding: 0 12px;
+  }
+  .grid {
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  .logo {
+    width: 44px;
+    height: 44px;
+  }
+  .brandRow {
+    gap: 8px;
+  }
+  .name {
+    font-size: 18px;
+  }
+  .meta {
+    font-size: 12px;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .links a {
+    font-size: 14px;
+  }
+  .actions {
+    gap: 8px;
+  }
+  .desc {
+    margin: 10px 0;
+  }
+  .bottom {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ft {
+    margin-top: 40px;
+    padding: 24px 0 12px;
+  }
+  .container {
+    padding: 0 10px;
+  }
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  .name {
+    font-size: 16px;
+  }
+  .meta {
+    font-size: 11px;
+    opacity: 0.8;
+  }
+  .grid {
+    gap: 16px;
+  }
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 12px;
+  }
+  .links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .links a {
+    font-size: 13px;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 700px) {
+  .ft {
+    margin-top: 56px;
+    padding: 32px 0 16px;
+  }
+  .container {
+    padding: 0 12px;
+  }
+  .grid {
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  .logo {
+    width: 44px;
+    height: 44px;
+  }
+  .brandRow {
+    gap: 8px;
+  }
+  .name {
+    font-size: 18px;
+  }
+  .meta {
+    font-size: 12px;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .links a {
+    font-size: 14px;
+  }
+  .actions {
+    gap: 8px;
+  }
+  .desc {
+    margin: 10px 0;
+  }
+  .bottom {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ft {
+    margin-top: 40px;
+    padding: 24px 0 12px;
+  }
+  .container {
+    padding: 0 10px;
+  }
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  .name {
+    font-size: 16px;
+  }
+  .meta {
+    font-size: 11px;
+    opacity: 0.8;
+  }
+  .grid {
+    gap: 16px;
+  }
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 12px;
+  }
+  .links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .links a {
+    font-size: 13px;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

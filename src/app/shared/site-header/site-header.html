@@ -1,0 +1,54 @@
+<header class="hdr">
+    <div class="container">
+        <div class="navShell">
+            <!-- Brand -->
+            <a class="brand" routerLink="/" (click)="closeMobileMenu()">
+                <img src="logo.jpeg" alt="CF Andrews High School" class="brandLogo" />
+                <div class="brandText">
+                    <div class="name">CF Andrews High School</div>
+                    <div class="meta">Pillanna Garden, Bangalore • Nursery to 10th</div>
+                </div>
+            </a>
+
+            <!-- Desktop -->
+            <nav class="menu" *ngIf="!isMobile">
+                <div class="menuTrack">
+                    <a *ngFor="let item of items" class="menuLink" [routerLink]="item.routerLink"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: item.routerLink === '/' }"
+                        #rl="routerLinkActive" (mouseenter)="setIndicatorFromEl($event)"
+                        (focus)="setIndicatorFromEl($event)" (click)="setIndicatorFromEl($event)">
+                        {{ item.label }}
+                    </a>
+
+                    <!-- sliding indicator -->
+                    <span class="indicator" [ngStyle]="indicatorStyle"></span>
+                </div>
+
+                <a class="cta" routerLink="/contact">
+                    <button class="btnPrimary" type="button">Enquiry</button>
+                </a>
+            </nav>
+
+
+            <!-- Mobile -->
+            <button class="hamburger" *ngIf="isMobile" type="button" [class.open]="mobileMenuOpen"
+                (click)="toggleMobileMenu()" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <!-- Mobile dropdown -->
+        <div class="mobileMenu" *ngIf="isMobile" [class.open]="mobileMenuOpen">
+            <nav class="mobileLinks">
+                <a *ngFor="let item of items" [routerLink]="item.routerLink" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: item.routerLink === '/' }" (click)="closeMobileMenu()">
+                    {{ item.label }}
+                </a>
+
+                <a class="mobileCta" routerLink="/contact" (click)="closeMobileMenu()">
+                    Enquiry
+                </a>
+            </nav>
+        </div>
+    </div>
+</header>

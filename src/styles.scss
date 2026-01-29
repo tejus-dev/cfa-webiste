@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+/* Universal scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  filter: blur(4px);
+  transition:
+    opacity 420ms ease,
+    transform 420ms ease,
+    filter 520ms ease;
+  will-change: opacity, transform, filter;
+}
+
+.reveal--in {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,226 @@
+.container {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* HERO */
+.hero {
+  margin-top: 14px;
+}
+:host ::ng-deep .p-carousel .p-carousel-content {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(11, 18, 32, 0.1);
+  box-shadow: 0 16px 50px rgba(11, 18, 32, 0.1);
+  background: #fff;
+}
+.heroSlide {
+  position: relative;
+  height: 450px;
+}
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(11, 31, 68, 0.75),
+    rgba(11, 31, 68, 0.2),
+    rgba(11, 31, 68, 0.05)
+  );
+}
+.heroContent {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding: 22px;
+}
+.heroCard {
+  width: min(620px, 92%);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(11, 18, 32, 0.1);
+  border-radius: 16px;
+  padding: 18px;
+  backdrop-filter: blur(8px);
+}
+.kicker {
+  font-weight: 900;
+  color: #0b1f44;
+  letter-spacing: 0.2px;
+  margin-bottom: 6px;
+}
+.h1 {
+  margin: 0 0 8px;
+  font-size: 40px;
+  line-height: 1.05;
+  color: #0b1220;
+  font-weight: 900;
+}
+.p {
+  margin: 0;
+  color: rgba(11, 18, 32, 0.75);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.heroActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+/* BUTTONS */
+.btnPrimary {
+  background: #0b1f44;
+  border: 1px solid #0b1f44;
+  border-radius: 999px;
+  font-weight: 800;
+}
+.btnGhost {
+  background: transparent;
+  border: 1px solid rgba(11, 31, 68, 0.25);
+  color: #0b1f44;
+  border-radius: 999px;
+  font-weight: 800;
+}
+.btnSoft {
+  background: rgba(11, 31, 68, 0.06);
+  border: 1px solid rgba(11, 31, 68, 0.1);
+  color: #0b1f44;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+/* CHIPS */
+.chips {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 18px 0 6px;
+}
+.chip {
+  background: #fff;
+  border: 1px solid rgba(11, 18, 32, 0.08);
+  border-radius: 999px;
+  padding: 12px 14px;
+  font-weight: 800;
+  color: rgba(11, 18, 32, 0.82);
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(11, 18, 32, 0.06);
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  padding: 22px 0 10px;
+}
+:host ::ng-deep .xcard {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(11, 18, 32, 0.08);
+  box-shadow: 0 14px 36px rgba(11, 18, 32, 0.08);
+}
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+}
+.cardHead i {
+  font-size: 18px;
+  color: #0ea5a5;
+}
+.cardTitle {
+  font-weight: 900;
+  color: #0b1f44;
+  line-height: 1.1;
+}
+.cardSub {
+  font-size: 12px;
+  color: rgba(11, 18, 32, 0.65);
+  margin-top: 2px;
+}
+.bullets {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: rgba(11, 18, 32, 0.78);
+  line-height: 1.7;
+  font-weight: 600;
+}
+.steps {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: rgba(11, 18, 32, 0.78);
+  line-height: 1.8;
+  font-weight: 700;
+}
+.miniGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+.mini {
+  background: rgba(14, 165, 165, 0.08);
+  border: 1px solid rgba(14, 165, 165, 0.2);
+  color: rgba(11, 31, 68, 0.92);
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 800;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .heroSlide {
+    height: 480px;
+  }
+  .chips {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .h1 {
+    font-size: 34px;
+  }
+}
+.sectionIntro {
+  margin: 48px 0 10px;
+  text-align: center;
+}
+
+.sectionIntro h2 {
+  font-size: 36px;
+  margin: 0;
+  font-weight: 900;
+  color: #0b1f44;
+}
+
+.sectionIntro p {
+  margin-top: 8px;
+  color: rgba(11, 18, 32, 0.7);
+  font-size: 16px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

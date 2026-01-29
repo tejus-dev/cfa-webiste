@@ -1,0 +1,63 @@
+<footer class="ft">
+    <div class="container">
+
+        <div class="grid">
+
+            <!-- Brand -->
+            <div class="col">
+                <div class="brandRow">
+                    <img class="logo" src="logo.jpeg" alt="CF Andrews High School Logo" />
+                    <div>
+                        <div class="name">CF Andrews High School</div>
+                        <div class="meta">Nursery to 10th • Pillanna Garden, Bangalore</div>
+                    </div>
+                </div>
+
+                <p class="desc">
+                    A trusted school focused on strong foundations, discipline and confident learning.
+                </p>
+
+                <div class="actions">
+                    <a [href]="telLink"><button pButton class="btnSoft" icon="pi pi-phone" label="Call"></button></a>
+                    <a [href]="waLink" target="_blank"><button pButton class="btnSoft" icon="pi pi-whatsapp"
+                            label="WhatsApp"></button></a>
+                    <a [href]="mapsLink" target="_blank"><button pButton class="btnGhost" icon="pi pi-map"
+                            label="Maps"></button></a>
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div class="col">
+                <div class="title">Address</div>
+                <div class="text">
+                    2nd Stage, Pillanna Garden<br />
+                    Bangalore, Karnataka
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="col">
+                <div class="title">Quick Links</div>
+                <nav class="links">
+                    <a routerLink="/about">About</a>
+                    <a routerLink="/academics">Academics</a>
+                    <a routerLink="/admissions">Admissions</a>
+                    <a routerLink="/gallery">Gallery</a>
+                    <a routerLink="/contact">Contact</a>
+                </nav>
+            </div>
+
+        </div>
+
+        <div class="bottom">
+            <div>© {{year}} CF Andrews High School</div>
+            <div>
+                Developed by
+                <a href="https://www.cleanstacky.com/" target="_blank" class="brandLink">
+                    <span class="brandName">Cleanstacky Technologies</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</footer>
